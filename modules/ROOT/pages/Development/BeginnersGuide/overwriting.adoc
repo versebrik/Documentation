@@ -1,82 +1,70 @@
-= Overwriting and Modifying Existing Content
+= 기존 콘텐츠 덮어쓰기 및 수정
 
-It is possible to overwrite or modify content from the base game or from other mods.
-This is not recommended as opposed to creating your own content that extends it,
-because mods that overwrite the same thing will likely be incompatible with each other.
-However, it is the most practical way to achieve certain functionality.
+기본 게임이나 다른 모드의 콘텐츠를 덮어쓰거나 수정할 수 있습니다.
+같은 항목을 덮어쓰는 모드 끼리는 서로 호환되지 않을 가능성이 높기 때문에 자신만의 콘텐츠를 만드는 것과는 반대로 권장하지 않는 방법입니다.
+그러나 특정 기능을 달성하는 가장 실용적인 방법입니다.
 
-== Use a Library Mod
+== 라이브러리 모드 사용
 
-Some other modders have already created mods that assist with the process of overwriting or modifying content.
-They can save you a lot of time.
+일부 다른 모더는 콘텐츠를 덮어쓰거나 수정하는 과정을 지원하는 모드를 이미 만들었습니다.
+시간을 많이 절약할 수 있습니다.
 
 === TweakIt
 
-TweakIt by Feyko allows you to write
-https://lua.org/[Lua] scripts to programatically modify game content.
+Feyko의 TweakIt을 사용하면 https://lua.org/[Lua] 스크립트를 작성하여 프로그래밍 방식으로 게임 콘텐츠를 수정할 수 있습니다.
 
-Documentation can be found via the 'docs switcher' on this site's sidebar, or
-https://docs.ficsit.app/tweakit/latest/index.html[here]
+설명서는 이 사이트의 사이드바에 있는 '문서 전환기' 또는 https://sfdocs.versebrik.com/tweakit/latest/index.html[여기]를 통해 찾을 수 있습니다.
 
-The mod has yet to be officially released,
-but you can download early builds from the https://discord.gg/2kV6AHbzZK[TweakIt discord],
-and find its source code https://github.com/Feyko/TweakIt[here].
+이 모드는 아직 공식적으로 출시되지 않았지만 https://discord.gg/2kV6AHbzZK[TweakIt discord]에서 초기 빌드를 다운로드하고 소스 코드 https://github.com/Feyko/TweakIt[여기]에서 찾을 수 있습니다. .
 
 === ContentLib
 
-https://ficsit.app/mod/ContentLib[ContentLib] by Nog and Robb allows creating and modifying content via writing JSON files.
-It also offers a Blueprint and {cpp} API to programatically generate, modify, or parse content at runtime.
-Additionally, it offers a limited form of CDO modification (described below) via JSON files.
+Nog와 Robb의 https://ficsit.app/mod/ContentLib[ContentLib]를 사용하면 JSON 파일 작성을 통해 콘텐츠를 만들고 수정할 수 있습니다.
+또한 런타임에 콘텐츠를 프로그래밍 방식으로 생성, 수정 또는 구문 분석하기 위한 블루프린트 및 {cpp} API를 제공합니다.
+또한 JSON 파일을 통해 제한된 형태의 CDO 수정(아래에서 설명)을 제공합니다.
 
-Documentation, including a step-by-step walkthrough of some common tasks, can be found https://docs.ficsit.app/contentlib/latest/index.html[here].
+몇 가지 일반적인 작업에 대한 단계별 안내를 포함한 설명서는 https://sfdocs.versebrik.com/contentlib/latest/index.html[여기]에서 찾을 수 있습니다.
 
-The mod has been officially released, and its documentation describes how to configure your mod to depend on it.
+이 모드는 공식적으로 출시되었으며 해당 설명서에는 모드에 의존하도록 구성하는 방법이 설명되어 있습니다.
 
-== Use CDO Manipulation
+== CDO 조작 사용
 
-If you still want to overwrite content without using a library,
-the correct mechanism for doing so is **Class Default Object (CDO)** manipulation.
+여전히 라이브러리를 사용하지 않고 콘텐츠를 덮어쓰려는 경우 올바른 메커니즘은 **CDO(Class Default Object)** 조작입니다.
 
-To perform a CDO modification, get the class default object of the
-class you're trying to override and change the relevant properties.
+CDO 수정을 수행하려면 재정의하려는 클래스의 클래스 기본 개체를 가져오고 관련 속성을 변경합니다.
 
-Changes to CDO's are reflected on all of the objects of the selected class that are created after the modification.
-Be mindful when using this, because you can break other mod and vanilla content without leaving a trace.
-For safety reasons, the function will log a warning when you're attempting to modify a class not owned by your mod.
+CDO의 변경 사항은 수정 후 생성된 선택한 클래스의 모든 개체에 반영됩니다.
+흔적을 남기지 않고 다른 모드와 바닐라 콘텐츠를 망가뜨릴 수 있으므로 이것을 사용할 때 주의해주세요.
+안전상의 이유로 모드가 소유하지 않은 클래스를 수정하려고 하면 함수가 경고를 기록합니다.
 
-Keep in mind that when performing a CDO,
-you're not actually changing anything on existing objects,
-you're just overwriting property values on "archetype" objects.
-You may still need to get all existing instances of the class
-and modify their values too to ensure they match your new desired value.
-Performing your CDO modifications earlier in the mod loading process can sometimes remove the need for this extra step.
+CDO를 수행할 때 실제로 기존 개체에서 아무 것도 변경하지 않고 "원형" 개체의 속성 값을 덮어쓰는 것임을 명심하세요.
+여전히 클래스의 모든 기존 인스턴스를 가져오고 원하는 새 값과 일치하도록 해당 값을 수정해야 할 수도 있습니다.
+모드 로딩 과정 초기에 CDO 수정을 수행하면 때때로 이 추가 단계가 필요하지 않을 수 있습니다.
 
-When performing CDO manipulation, you need to keep the CDO in-memory to ensure that Unreal does not garbage collect your patched object (and its descendants) and later load it unmodified from disk, undoing your change. +
-To do this, you need to reference the CDO in a property. More on this in the language-specific sections below.
+CDO 조작을 수행할 때 언리얼이 패치된 오브젝트(및 그 자손)를 쓰레기 취급하지 않고 나중에 디스크에서 수정되지 않은 상태로 로드하여 변경 사항을 취소하지 않도록 CDO를 메모리에 유지해야 합니다. +
+이렇게 하려면 속성에서 CDO를 참조해야 합니다. 아래의 언어별 섹션에서 이에 대해 자세히 알아보세요.
 
-=== Understanding the Limits of CDOs
+=== CDO의 한계에 대한 이해
 
-It is important to understand that Class Default Object modification is not capable of accomplishing everything.
+Class Default Object 수정이 모든 것을 달성할 수 있는 것은 아니라는 점을 이해하는 것이 중요합니다.
 
-CDO modification can only influence behavior and properties that already exist an object - it can't define new behaviors.
+CDO 수정은 개체에 이미 존재하는 동작 및 속성에만 영향을 미칠 수 있으며 새 동작을 정의할 수는 없습니다.
 
-Also, the way some features are implemented behind the scenes
-could mean that modifying the class default object could have no effects whatsoever,
-as the values you changed could be overwritten by something else.
+또한 일부 기능이 배후에서 구현되는 방식은 변경한 값을 다른 항목으로 덮어쓸 수 있으므로 클래스 기본 개체를 수정해도 아무 효과가 없을 수 있음을 의미할 수 있습니다.
 
-=== Blueprint
+=== 블루프린트
 
-In Blueprint, you can use the `Get Class Default Object` node to get the class default object.
-Afterwards, you can use the class' existing setters to modify fields. +
-You might need to use an xref:Development/ModLoader/AccessTransformers.adoc[Access Transformer]
-to make the field that you intend to change accessible from blueprints.
+블루프린트에서 `Get Class Default Object` 노드를 사용하여 클래스 기본 객체를 가져올 수 있습니다.
+그런 다음 클래스의 기존 setter를 사용하여 필드를 수정할 수 있습니다. +
+변경하려는 필드를 블루프린트에서 접근할 수 있도록 하려면
+xref:Development/ModLoader/AccessTransformers.adoc[접근 변환기]를 사용해야 할 수 있습니다.
 
-To keep a reference to the CDO, create a property of type Object in the blueprint where you also change the CDO. Set the property's value to be the CDO before manipulating the object. +
-If you are modifying multiple CDOs, you can make the property an array of objects instead, and add each CDO to the array.
+CDO에 대한 참조를 유지하려면 CDO도 변경하는 블루프린트에서 오브젝트 유형의 속성을 생성합니다. 개체를 조작하기 전에 속성 값을 CDO로 설정합니다. +
+여러 CDO를 수정하는 경우 대신 속성을 개체 배열로 만들고 각 CDO를 배열에 추가할 수 있습니다.
 
-=== {cpp} Example
+=== {cpp} 예시
 
-Here's an example from Kyrium's KBFL for adding additional allowed classes to the Pressurizer and its extractor nodes.
+다음은 가압기 및 해당 추출기 노드에 추가 허용 클래스를 추가하기 위한 Kyrium의 KBFL의 예입니다.
 
 ```cpp
 void UKBFLResourceNodeDescriptor_ResourceWell::AfterSpawning()
@@ -97,24 +85,18 @@ void UKBFLResourceNodeDescriptor_ResourceWell::AfterSpawning()
 }
 ```
 
-In this example, the CDO-referencing properties are `frackingActivatorCDO` and `frackingExtractorCDO`.
-To properly reference CDOs, create a property of type `UObject*` in the class where you also change the CDO. Make sure to mark the property as `UPROPERTY` or UE will not know about the property. +
-If you are modifying multiple CDOs, you can make the property a `TArray<UObject*>` instead, and add each CDO to the array.
+이 예에서 CDO 참조 속성은 `frackingActivatorCDO` 및 `frackingExtractorCDO` 입니다.
+CDO를 제대로 참조하려면 CDO도 변경하는 클래스에서 `UObject*` 유형의 속성을 생성하세요. 속성을 `UPROPERTY` 로 표시하지 않으면 UE가 속성에 대해 알지 못합니다. +
+여러 CDO를 수정하는 경우 대신 속성을 `TArray<UObject*>` 로 만들고 각 CDO를 배열에 추가할 수 있습니다.
 
-== Extending Existing Content
+== 기존 콘텐츠 확장
 
-If you need to add new behavior to existing content, it may be easier to extend it by making a subclass of it,
-then define the new behaviors in your subclass.
+기존 콘텐츠에 새 동작을 추가해야 하는 경우 하위 클래스를 만들어 확장한 다음 하위 클래스에서 새 동작을 정의하는 것이 더 쉬울 수 있습니다.
 
-This works well in tandem with the 
-xref:Development/ReuseGameFiles.adoc#_the_placeholder_system[Placeholder System] -
-even though we don't have the implementation details of the real version,
-by extending its placeholder, we will still be able to use those features at runtime.
+이는 xref:Development/ReuseGameFiles.adoc#_플레이스홀더_시스템[플레이스홀더 시스템]과 함께 잘 작동합니다. 실제 버전의 구현 세부 정보가 없더라도 플레이스홀더를 확장하면 런타임에 해당 기능을 계속 사용할 수 있습니다.
 
-== Hooking
+== 후킹
 
-If a CDO modification isn't working and extending the existing content is not an option,
-hooking existing functions on the content may allow for the modifications you want.
+CDO 수정이 작동하지 않고 기존 콘텐츠를 확장하는 것이 옵션이 아닌 경우 콘텐츠에 기존 기능을 연결하면 원하는 수정이 가능할 수 있습니다.
 
-Hooking is a very complicated topic covered in more detail on
-xref:Development/Cpp/hooking.adoc[its own page].
+후킹은 xref:Development/Cpp/hooking.adoc[자체 페이지]에서 자세히 다루는 매우 복잡한 주제입니다.

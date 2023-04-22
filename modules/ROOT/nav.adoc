@@ -25,7 +25,7 @@
 
 ** xref:Development/Cpp/index.adoc[C++ 모딩]
 *** xref:Development/Cpp/setup.adoc[설정]
-*** xref:Development/Cpp/hooking.adoc[Hooking]
+*** xref:Development/Cpp/hooking.adoc[후킹]
 *** xref:Development/Cpp/thirdparty.adoc[제삼자 라이브러리]
 
 ** xref:Development/Modeling/index.adoc[3D 모델링]
@@ -74,7 +74,7 @@
 ** xref:Development/UpdatingFromSml2.adoc[SML 2.2.1에서 업데이트]
 
 * xref:CommunityResources/index.adoc[커뮤니티 리소스]
-** xref:CommunityResources/AcronymVault.adoc[Acronym Vault]
+** xref:CommunityResources/AcronymVault.adoc[약어 금고]
 ** xref:CommunityResources/AssetToolkit.adoc[애셋 도구 모음]
 ** xref:CommunityResources/ModelingTools.adoc[모델링 도구]
 ** xref:CommunityResources/SFUIKIT.adoc[UI 모음]

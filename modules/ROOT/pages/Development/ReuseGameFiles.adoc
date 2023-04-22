@@ -29,101 +29,70 @@ SML 출시 페이지에서 제공되는 스타터 프로젝트는
 `FGItemDescriptor` 플레이스홀더가 누락된 경우 동일한 과정을 사용하여 만들 수도 있습니다.
 그러나 메시나 텍스처 대신 설명자를 플레이스홀더로 지정하게 됩니다.
 
-== Example Static Mesh and Icon Reuse
+== 스태틱 메시 및 아이콘 재사용의 예시
 
-As an example, let's say you wanted to reuse the static mesh and icon from the
-https://satisfactory.gamepedia.com/HUB_Parts[HUB Parts]
-component mentioned earlier.
+예를 들어 앞에서 언급한 https://satisfactory.gamepedia.com/HUB_Parts[허브 부품] 구성 요소의 스태틱 메시와 아이콘을 재사용하고 싶다고 가정해 보겠습니다.
 
-The first step is to track down the location of the asset in the base game.
-This is done by figuring out the Blueprint Path of the asset via the
-https://satisfactory.gamepedia.com/[Satisfactory Wiki],
-finding the content on a
-https://github.com/Goz3rr/SatisfactorySaveEditor/tree/master/Reference%20Materials[reference list], or via searching around for it in
-https://www.gildor.org/en/projects/umodel[UModel]
-(the case for most GUI elements).
+첫 번째 단계는 기본 게임에서 애셋의 위치를 추적하는 것입니다.
+이것은 https://satisfactory.gamepedia.com/[새티스팩토리 위키]를 통해 자산의 블루프린트 경로를 파악하거나,
+https://github.com/Goz3rr/SatisfactorySaveEditor/tree/master/Reference%20Materials[레퍼런스 목록]에서 콘텐츠를 찾거나,
+https://www.gildor.org/en/projects/umodel[UModel]에서 주변 검색을 통해 수행됩니다(대부분의 GUI 요소의 경우).
 
-image:ReuseContent/WikiHubPartsBox.png[HUB Parts on the Satisfactory Wiki]
+image:https://cdn.discordapp.com/attachments/1097599213161938996/1097599214143426710/WikiHubPartsBox.png[새티스팩토리 위키에서의 허브 부품]
 
 
-_HUB Parts on the Satisfactory Wiki_
+_새티스팩토리 위키에서의 허브 부품_
 
-Next, you can go to that blueprint path in UModel to find out
-what the paths of the relevant static mesh and icon objects are.
+다음으로 UModel에서 해당 블루프린트 경로로 이동하여 관련 스태틱 메시 및 아이콘 개체의 경로를 찾을 수 있습니다.
 
-For the HUB Parts, this path is
-`/Game/FactoryGame/Resource/Parts/HUBParts/Desc_HUBParts.Desc_HUBParts_C`,
-so we should go to
-`\Game\FactoryGame\Resource\Parts\HUBParts`
-in UModel to find the relevant files.
+허브 부품의 경우 이 경로는 `/Game/FactoryGame/Resource/Parts/HUBParts/Desc_HUBParts.Desc_HUBParts_C` 이므로 관련 파일을 찾으려면 UModel의 `\Game\FactoryGame\Resource\Parts\HUBParts` 로 이동해야 합니다.
 
-image:ReuseContent/UModelFoundPath.png[HUB Parts inside of UModel]
+image:https://cdn.discordapp.com/attachments/1097599213161938996/1097599215607238657/UModelFoundPath.png[UModel에서의 허브 부품]
 
 
-_HUB Parts inside of the UModel package browser_
+_UModel에서의 허브 부품_
 
-Lo and behold, here is the `FGItemDescriptor` of the hub parts, its static mesh,
-and folders that contain its Material Instance, textures, and icons.
+보세요, 여기 허브 부분의 'FGItemDescriptor', 스태틱 메시, 머티리얼 인스턴스, 텍스처, 아이콘이 포함된 폴더가 있습니다.
 
-If you want, you can open up the asset to view and make sure you've found
-the right thing.
+원하는 경우 애셋을 열어보고 올바른 항목을 찾았는지 확인할 수 있습니다.
 
-image:ReuseContent/UModelHubParts.png[HUB Parts in the UModel Viewer]
+image:https://media.discordapp.net/attachments/1097599213161938996/1097599215930179755/UModelHubParts.png[UModel 뷰어에서의 허브 부품]
 
 
-_HUB Parts in the UModel UE Viewer_
+_UModel UE 뷰어에서의 허브 부품_
 
-Now that you've found the location of the asset in the base game,
-you're ready to set up the placeholder for it. Within your editor,
-you should go to the same path that you followed in UModel, creating
-folders with the exact same name if needed to reach your destination.
+이제 기본 게임에서 애셋의 위치를 찾았으므로 이에 대한 플레이스홀더를 설정할 준비가 되었습니다. 편집기 내에서 UModel에서 따랐던 동일한 경로로 이동하여 목적지에 도달하는 데 필요한 경우 정확히 동일한 이름의 폴더를 생성해야 합니다.
 
-Since we are looking to reuse the static mesh and icons of the HUB parts
-for our example, we'll need to put a Static Mesh called `SM_HubParts_01` at the path
-`/Game/FactoryGame/Resource/Parts/HUBParts/`
-and a Texture called `IconDesc_HubParts_256` at the path 
-`/Game/FactoryGame/Resource/Parts/HUBParts/UI/`.
+예를 들어 허브 부분의 스태틱 메시와 아이콘을 재사용하려고 하므로
+`/Game/FactoryGame/Resource/Parts/HUBParts/` 경로에 `SM_HubParts_01` 이라는 스태틱 메시를 배치하고
+`/Game/FactoryGame/Resource/Parts/HUBParts/UI/` 경로에 `IconDesc_HubParts_256` 이라는 텍스처를 배치해야 합니다.
 
 [TIP]
 ====
-Notice that the actual content you use for the content you are
-creating a placeholder for _does not matter at all_ - just that it
-has the correct name, path, and asset type as the content you want to reference.
+플레이스홀더를 만들고 있는 콘텐츠에 사용하는 실제 콘텐츠는 _전혀 중요하지 않습니다_. 단지 참조하려는 콘텐츠로 올바른 이름, 경로 및 애셋 유형이 있는지만 확인하면 됩니다.
 ====
 
-For the mesh, we can reuse the
-link:{attachmentsdir}/BeginnersGuide/simpleMod/Mesh_DocBuild.fbx[Plantpot of Knowledge]
-from the
-xref:Development/BeginnersGuide/SimpleMod/buildable.adoc[Buildable tutorial],
-which you can copy in from the ExampleMod in your project, or redownload from the above link.
+메시의 경우
+xref:Development/BeginnersGuide/SimpleMod/buildable.adoc[건물 튜토리얼]의
+link:{attachmentsdir}/BeginnersGuide/simpleMod/Mesh_DocBuild.fbx[지식의 화분]을 재사용할 수 있으며 프로젝트의 ExampleMod에서 복사하거나 위 링크에서 다시 다운로드할 수 있습니다.
 
-For the icon texture, we can reuse the 
-link:{attachmentsdir}/BeginnersGuide/simpleMod/Icon_SchemDoc.png[Soon™ Icon]
-from the
-xref:Development/BeginnersGuide/SimpleMod/recipe.adoc[Recipe/Schematic tutorial],
-which you can copy in from the ExampleMod in your project or redownload from the above link.
+아이콘 텍스처의 경우
+xref:Development/BeginnersGuide/SimpleMod/recipe.adoc[제작법/설계도 튜토리얼]의
+link:{attachmentsdir}/BeginnersGuide/simpleMod/Icon_SchemDoc.png[Soon™ 아이콘]을 재사용할 수 있으며 프로젝트의 ExampleMod에서 복사하거나 위 링크에서 다시 다운로드할 수 있습니다.
 
-image:ReuseContent/PlaceholderMesh.png[Final Placeholder Mesh]
-image:ReuseContent/PlaceholderIcon.png[Final Placeholder Icon]
+image:https://cdn.discordapp.com/attachments/1097599213161938996/1097599215120679124/PlaceholderMesh.png[최종 플레이스홀더 메시]
+image:https://cdn.discordapp.com/attachments/1097599213161938996/1097599214638350508/PlaceholderIcon.png[최종 플레이스홀더 아이콘]
 
-Note that these screenshots also contain placeholders
-of some other files related to the HUB Parts.
-You do not need to have placeholders for everything,
-just the content you want to reference.
+이 스크린샷에는 허브 부품과 관련된 다른 파일의 플레이스홀더도 포함되어 있습니다.
+모든 항목에 대한 플레이스홀더가 필요하지 않고 참조하려는 콘텐츠만 있으면 됩니다.
 
-Once these placeholder assets are created,
-you can refer to them from elsewhere in your mod project.
-When you pack your mod, these placeholders will not be packed,
-and at runtime they will point to the assets from the base game
-and contain the correct textures, meshes, descriptors, etc.
-in place of whatever you used for the placeholder.
+이러한 플레이스홀더 애셋이 생성되면 모드 프로젝트의 다른 곳에서 참조할 수 있습니다.
+모드를 압축할 때 이러한 플레이스홀더는 압축되지 않으며 런타임 시 기본 게임의 애셋을 가리키고 플레이스홀더에 사용한 모든 항목 대신 올바른 텍스처, 메시, 설명자 등이 포함되게 됩니다.
 
-== Generating a Complete Starter Project
+== 완전한 스타터 프로젝트 생성
 
-It is possible to create a personal version of the Starter Project
-that includes most of these base game files accessible from within the editor.
-This version of the project would include models, textures, and other resources
-instead of their placeholder versions, allowing you to view them in-editor.
+편집기 내에서 접근할 수 있는 이러한 게임 기본 파일 대부분을 포함하는 스타터 프로젝트의 개인 버전을 생성할 수 있습니다.
+이 버전의 프로젝트에는 플레이스홀더 버전 대신 모델, 텍스처 및 기타 리소스가 포함되므로 편집기에서 볼 수 있습니다.
 
-You can read more about this in its section on the 
-xref:Development/ExtractGameFiles.adoc#_generating_a_complete_starter_project[Extracting Game Files page].
+이에 대한 자세한 내용은
+xref:Development/ExtractGameFiles.adoc#_generating_a_complete_starter_project[게임 파일 추출 페이지] 섹션에서 읽을 수 있습니다.

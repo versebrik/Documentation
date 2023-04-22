@@ -72,7 +72,7 @@ https://github.com/satisfactorymodding/SatisfactoryModLauncher/releases[깃허�
 == 기여
 
 이 한국어 문서는 비공식적으로 제작되었습니다. 2023년 4월 기준 공식 문서를 포크해 제작되었으며, 불완전한 부분이 있을 수 있습니다.
-문서에서 수정해야 할 사항을 발견했다면 수정 후 풀 요청을 보내거나 디스코드 `versebrik#6788` 로 잘못된 부분을 지적하여 DM하여 주시기 바랍니다.
+문서에서 수정해야 할 사항을 발견했다면 수정 후 풀 리퀘스트를 보내거나 디스코드 `versebrik#6788` 로 잘못된 부분을 지적하여 DM하여 주시기 바랍니다.
 
 공식 문서에 대한 기여는 https://github.com/satisfactorymodding/Documentation#contributing[깃허브 저장소의 readme] 문서에서 찾을 수 있습니다.
 

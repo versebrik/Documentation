@@ -3,7 +3,7 @@ site:
   start_page: satisfactory-modding-ko::index.adoc
 
   ## Used for prod
-  url: https://sfdocsko.versebrik.com
+  url: https://sfdocs.versebrik.com
 
   ## Used for dev
   #url: http://localhost:8000

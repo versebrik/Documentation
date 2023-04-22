@@ -1,73 +1,62 @@
-= Adding an In-Game Mod Icon
+= 인게임 모드 아이콘 추가
 
-The in-game mods list, accessible from the main menu, allows you to view and configure all loaded mods.
+메인 메뉴에서 접근할 수 있는 게임 내 모드 목록을 통해 로드된 모든 모드를 보고 구성할 수 있습니다.
 
-The mods list also displays image icons for installed mods,
-or the following placeholder image if none was found:
+모드 목록은 또한 설치된 모드에 대한 이미지 아이콘을 표시하거나,
+찾지 못한 경우 다음 플레이스홀더 이미지를 표시합니다.
 
-image:AddingModIcon/NoIngameModIcon.jpg[Ingame Icon]
+image:https://cdn.discordapp.com/attachments/1097598204775780393/1097598205157453916/NoIngameModIcon.jpg[인게임 아이콘]
 
-Even if you have correctly set your plugin's icon in the Unreal editor,
-there's still a couple steps needed for Alpakit to recognize it
-and package it with your mod.
+언리얼 편집기에서 플러그인 아이콘을 올바르게 설정했더라도 알파킷이 이를 인식하고 모드와 함께 패키징하게 하려면 몇 가지 단계가 필요합니다.
 
 
-== Select an Image
+== 이미지 선택
 
-First, we need a png file to use as the Icon for our mod.
-You can re-use the same one you plan to use when
-xref:UploadToSMR.adoc[uploading your mod to SMR],
-but you might need to resize it for use here - this icon should be a square and at least 128x128 pixels. 
+먼저 모드의 아이콘으로 사용할 png 파일이 필요합니다.
+xref:UploadToSMR.adoc[모드를 SMR에 업로드]할 때 사용하려는 것과 동일한 것을 다시 사용할 수 있지만 여기에서 사용하기 위해 크기를 조정해야 할 수도 있습니다. 이 아이콘은 정사각형이어야 하며 최소 128x128 픽셀이어야 합니다.
 
-== Alpakit Helper Utility
+== Alpakit 도우미 유틸리티
 
-If you created your mod using the
-xref:Development/BeginnersGuide/SimpleMod/gameworldmodule.adoc[Alpakit Create Mod Utility],
-the relevant configuration files mentioned below have already been created for you.
+xref:Development/BeginnersGuide/SimpleMod/gameworldmodule.adoc[알파킷 모드 생성 유틸리티]를 사용하여 모드를 만든 경우 아래 언급된 관련 구성 파일이 이미 생성되어 있습니다.
 
-To change the icon, click the `Edit` button next to your mod's Alpakit listing
-and select your file via the three-dots file picker.
-Be sure to check and xref:#_making_sure_it_worked[make sure it worked].
+아이콘을 변경하려면 모드의 알파킷 목록 옆에 있는 `Edit` 버튼을 클릭하고 점 3개 파일 선택기를 통해 파일을 선택합니다.
+반드시 확인하고 xref:#_제대로_작동하는지_확인[작동하는지 확인]하세요.
 
-== Setup
+== 설정
 
-If you didn't create your mod using the Alpakit Create Mod Utility,
-or if you want to add another custom directory to be included, see the steps below.
+알파킷 모드 생성 유틸리티를 사용하여 모드를 생성하지 않았거나 포함할 다른 사용자 정의 경로를 추가하려는 경우 아래 단계를 참조하세요.
 
-Let's navigate to our SML project (where the FactoryGame.uproject file is located)
-and from there go to `/Plugins/<mod_reference>`
-(read more on mod references xref:Development/BeginnersGuide/index.adoc#_mod_reference[here]).
-We should now be in the folder where our mod's .uplugin file is located.
+SML 프로젝트(FactoryGame.uproject 파일이 있는 곳)로 이동하고 거기에서 `/Plugins/<모드_레퍼런스>` 로 이동합니다(모드 레퍼런스는 xref:Development/BeginnersGuide/index.adoc#_mod_reference[여기]에서).
+이제 모드의 .uplugin 파일이 있는 폴더에 있어야 합니다.
 
-Next, let's create 2 folders within our mod plugin folder:
+다음으로 모드 플러그인 폴더 내에 2개의 폴더를 생성해 보겠습니다.
 
 - `Resources`
 - `Config`
 
 [WARNING]
 ====
-Be sure that the folder names exactly match those shown above.
+폴더 이름이 위에 표시된 이름과 정확히 일치하는지 확인하세요.
 ====
 
-Our folder should now look like this:
+폴더는 이제 다음과 같아야 합니다.
 
-image:AddingModIcon/FolderCreated.jpg[Folder Created]
+image:https://cdn.discordapp.com/attachments/1097598204775780393/1097598204901597305/FolderCreated.jpg[폴더 생성됨]
 
-In our "Resources" folder we will put our Icon and rename it to `Icon128.png`.
-If the icon is given any other file name, the Unreal editor and game will not recognize it
-and will fall back to default icon instead.
+"Resources" 폴더에 아이콘을 넣고 이름을 `Icon128.png` 로 바꿉니다.
+아이콘에 다른 파일 이름이 지정되면 언리얼 에디터와 게임이 이를 인식하지 못하고 대신 기본 아이콘으로 돌아갑니다.
 
-== Modify Packaging Settings
+== 패키징 설정 수정
 
-Now we need to tell Alpakit to include our "Resources" folder in the mod when packaging it.
-To do this, inside the "Config" folder, we need to create the file `PluginSettings.ini`.
+이제 패키징할 때 모드에 "Resources" 폴더를 포함하도록 알파킷에 지시해야 합니다.
+이렇게 하려면 "Config" 폴더 안에 `PluginSettings.ini` 파일을 만들어야 합니다.
 
-You can do this by creating a new text file and then changing the extension to a `.ini` file, for example.
-If you chose to create the file in this manner, we suggest you turn on
-https://support.winzip.com/hc/en-us/articles/115011457948-How-to-configure-Windows-to-show-file-extensions-and-hidden-files[showing file name extensions]
-to assist with this.
+예를 들어 새 텍스트 파일을 만든 다음 확장자를 `.ini` 파일로 변경하여 이 작업을 수행할 수 있습니다.
+이러한 방식으로 파일을 생성하기로 선택한 경우 파일 확장명 표시를 켜는 것이 좋습니다.
 
-Inside the file, insert the following lines:
+image:https://cdn.discordapp.com/attachments/1097598204775780393/1099214886527049858/image.png[파일 확장명 표시]
+
+파일 내부에 다음 줄을 추가합니다.
 
 [source,text]
 ----
@@ -75,16 +64,13 @@ Inside the file, insert the following lines:
 +AdditionalNonUSFDirectories=Resources
 ----
 
-The attribute "+AdditionalNonUSFDirectories" tells Alpakit that we wish to include a directory during the packaging of our mod.
+"+AdditionalNonUSFDirectories" 속성은 알파킷에게 모드를 패키징하는 동안 경로를 포함하고 싶다고 알려줍니다.
 
-We pass it the "Resources" value which is the folder we wish to include (the one containing our Mod Icon).
+포함하려는 폴더(모드 아이콘이 포함된 폴더)인 "Resources" 값을 전달합니다.
 
-== Making Sure It Worked
+== 제대로 작동하는지 확인
 
-After making these changes, you should be able to pack your mod again from the editor.
-If everything worked, your mod icon should now show on the in-game menu. Hooray!
+이렇게 변경한 후에는 에디터에서 모드를 다시 패킹할 수 있어야 합니다.
+모든 것이 제대로 작동했다면 이제 모드 아이콘이 게임 내 메뉴에 표시됩니다. 만세!
 
-If the icon still doesn't show, go back and ensure that you have the correct file and folder names,
-and that the image is of the correct size and format.
-
-image:BeginnersGuide/simpleMod/ModInModsMenu.jpg[The mod displaying in the mods menu]
+아이콘이 여전히 표시되지 않으면 뒤로 돌아가서 파일 및 폴더 이름이 올바른지, 이미지의 크기와 형식이 올바른지 확인하세요.
