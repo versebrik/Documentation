@@ -1,6 +1,6 @@
 site:
-  title: Satisfactory Modding Documentation
-  start_page: satisfactory-modding::index.adoc
+  title: 새티스팩토리 모딩 문서
+  start_page: satisfactory-modding-ko::index.adoc
   url: http://localhost:8000
 
 content:

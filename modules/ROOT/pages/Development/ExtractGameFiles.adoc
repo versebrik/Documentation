@@ -1,4 +1,4 @@
-= Extracting Game Files
+= 게임 파일 추출
 
 Having access to the model and texture files used by Coffee Stain
 can be a valuable resource for creating content for your own mods.

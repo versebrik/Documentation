@@ -1,35 +1,34 @@
-= SML Commands
+= SML 명령어
 
 [TIP]
 ====
-If you're looking to create your own chat commands, check out
-xref:Development/ModLoader/ChatCommands.adoc[this page].
+자신만의 채팅 명령어를 만들려는 경우 xref:Development/ModLoader/ChatCommands.adoc[이 페이지]를 확인하세요.
 ====
 
-SML adds two kinds of commands to the game by default, xref:#_chat_commands[*Chat Commands*] and xref:_console_cheat_commands[*Console Cheat Commands*].
+SML은 기본적으로 xref:#_채팅_명령어[*채팅 명령어*] 및 xref:_콘솔_치트_명령어[*콘솔 치트 명령어*]라는 두 종류의 명령어를 게임에 추가합니다.
 
-== Chat Commands
+== 채팅 명령어
 
-These commands can be run *from the in-game chat window* prefixed with a `/`.
-For example, to run the 'help' command, you'd enter `/help` into chat.
+이 명령어는 *게임 내 채팅 창* 에서 `/` 접두어로 실행할 수 있습니다.
+예를 들어 'help' 명령어를 실행하려면 채팅에 `/help` 를 입력해야 하는 것입니다.
 
-Note that only the player who runs the command will see the command output.
+명령어는 실행하는 플레이어만 명령어의 출력을 볼 수 있습니다.
 
-Chat commands added by mods will also show up when you run `/help`.
+모드에서 추가한 채팅 명령어는 `/help` 를 실행할 때도 표시됩니다.
 
 [cols="1,4a"]
 |===
-|Command |Description
+|명령어 |설명
 
 |info
-|Prints information about the SML version.
-Also lists all currently loaded mods.
+|SML의 버전에 대한 정보를 출력합니다.
+또한 현재 로드된 모드를 표시합니다.
 
 |help
-|Lists all available commands and gives a short description of their function.
+|사용 가능한 모든 명령어를 나열하고 해당 기능에 대한 간단한 설명을 제공합니다.
 
 |list
-|Provides a list of currently connected players.
+|현재 연결된 플레이어 목록을 제공합니다.
 |===
 
 // == Development Mode Only commands
@@ -44,208 +43,178 @@ Also lists all currently loaded mods.
 // |
 // |===
 
-== Console Cheat Commands
+== 콘솔 치트 명령어
 
-These commands can be run *from the in-game developer console* which is opened when you press the grave/tilde key (``` or `~`), or when you press F2.
+이 명령어는 *게임 내 개발자 콘솔* 에서 실행될 수 있습니다. 이 콘솔은 그레이브/물결표 키(``` 또는 `~`)를 누르거나 F2를 누를 때 열립니다.
 
-To use these, you must have `enableCheatConsoleCommands` enabled in the
-xref:SMLConfiguration.adoc[SML config].
+이를 사용하려면 xref:SMLConfiguration.adoc[SML 구성]에서 `enableCheatConsoleCommands` 를 활성화해야 합니다.
 
-This list consists of some of the most useful ones, but there are more.
+이 목록은 가장 유용한 목록으로 구성되어 있지만 더 있습니다.
 
-A full list Satisfactory-specific cheats can be found
-https://github.com/satisfactorymodding/SatisfactoryModLoader/blob/sml-dev/Source/FactoryGame/Public/FGCheatManager.h[here].
+새티스팩토리 관련 치트의 전체 목록은 https://github.com/satisfactorymodding/SatisfactoryModLoader/blob/sml-dev/Source/FactoryGame/Public/FGCheatManager.h[여기]에서 확인할 수 있습니다.
 
-The native Unreal cheats
-(https://github.com/SatisfactoryModdingUE/UnrealEngine/blob/4.25.3-CSS/Engine/Source/Runtime/Engine/Classes/GameFramework/CheatManager.h[listed here])
-can also be used. Note that to view this link,
-you must be signed into a GitHub account registered with Epic Games,
-otherwise it will display as a 404 page.
-The process to register your account can be found
-xref:Development/BeginnersGuide/dependencies.adoc#_unreal_engine_4_custom_engine[here].
+기본 언리얼 치트(https://github.com/SatisfactoryModdingUE/UnrealEngine/blob/4.25.3-CSS/Engine/Source/Runtime/Engine/Classes/GameFramework/CheatManager.h[여기에 나열됨])도 사용할 수 있습니다.
+이 링크를 보려면 에픽 게임즈에 등록된 깃허브 계정에 로그인해야 합니다.
+그렇지 않으면 404 페이지로 표시됩니다.
+계정 등록 과정은 xref:Development/BeginnersGuide/dependencies.adoc#_unreal_engine_4_custom_engine[여기]에서 찾을 수 있습니다.
 
 [cols="2,4a,1"]
 |===
-|Command |Description |Category
+|명령어 |설명 |카테고리
 
 // From UE CheatManager
 
 |Teleport
-| Teleports you to where your cursor is looking.
-No range limit.
-Be careful of teleporting outside of the map by accident.
-| Cheat Manager
+| 거리 제한 없이 커서가 보고 있는 곳으로 순간이동합니다.
+맵 밖으로 순간이동하지 않도록 주의하세요.
+| 치트 관리자
 
 |God
-| Toggles god mode, making you immune to damage.
-| Cheat Manager
+| 신 모드를 전환하여 모든 피해에 면역이 됩니다.
+| 치트 관리자
 
-|CheatScript <ScriptName, string>
-| Executes commands listed in `CheatScript.ScriptName` ini section of DefaultGame.ini
-| (Unspecified)
+|CheatScript <스크립트 이름, 문자열>
+| DefaultGame.ini의 `CheatScript.ScriptName` ini 섹션에 나열된 명령을 실행합니다.
+| (지정되지 않음)
 
 // From FGCheatManager
 
 |NoMessages <true/false>
-| Disables ADA messages on unlocks.
-| (Unspecified)
+| 잠금 해제시의 ADA 메시지를 비활성화 합니다.
+| (지정되지 않음)
 
 |GiveAvailableSchematics 
-| Gives access to all currently purchaseable schematics in the game (including modded ones).
-It's recommended that you run `NoMessages true` first.
-| Research
+| 게임에서 현재 구매 가능한 모든 설계도(수정된 설계도 포함)에 대한 접근을 제공합니다.
+먼저 `NoMessages true` 를 실행하는 것이 좋습니다.
+| 연구
 
 |ResetGamePhases
-| Resets your space elevator progress.
-Does not affect unlocked milestones.
-| Research
+| 우주 엘리베이터 진행 상황을 초기화합니다.
+잠금 해제된 마일스톤에는 영향을 미치지 않습니다.
+| 연구
 
 |SetNextGamePhase
-| Completes the next available space elevator tier.
-Does not grant any milestones.
-| Research
+| 사용 가능한 다음 우주 엘리베이터 티어를 완료합니다.
+마일스톤을 부여하지 않습니다.
+| 연구
 
-|GiveSchematicsOfTier <int, tier number in HUB>
-| Unlocks all milestones in the specified tier number.
-It's recommended that you run `NoMessages true` first.
-| Research
+|GiveSchematicsOfTier <정수, 허브 티어 숫자>
+| 지정된 티어 번호의 모든 마일스톤을 잠금 해제합니다.
+먼저 `NoMessages true` 를 실행하는 것이 좋습니다.
+| 연구
 
 |GiveActiveMilestoneSchematic
-| Immediately completes the selected milestone in the HUB.
-| Research
+| 허브에서 선택한 마일스톤을 즉시 완료합니다.
+| 연구
 
 |CompleteResearch 
-| Immediately completes ongoing MAM research.
-| (Unspecified)
+| 진행 중인 M.A.M. 연구를 즉시 완료합니다.
+| (지정되지 않음)
 
 |NoCost <true/false>
-| Enables or disables the NoCost cheat,
-which is saved in the save file,
-and persists even when mods are uninstalled.
-When enabled, no items are required to build things with the build gun.
-Crafting stations still require ingredients.
-| Resources
+| 세이브 파일에 저장되고 모드가 제거된 경우에도 유지되는 비용 없음 치트를 전환합니다.
+활성화되면 빌드 건으로 건물을 만드는 데 항목이 필요하지 않습니다.
+정류장 건설에는 여전히 재료가 필요합니다.
+| 자원
 
 |NoPower <true/false>
-| Enables or disables the NoPower cheat,
-which is saved in the save file,
-and persists even when mods are uninstalled.
-When enabled, buildings still require a power connection,
-but they require no electricity to run.
-Vehicles also do not require fuel.
-| Resources
+| 세이브 파일에 저장되고 모드가 제거된 경우에도 지속되는 전력 무한 치트를 전환합니다.
+활성화된 경우 건물은 여전히 전원 연결이 필요하지만 작동하는 데 전기가 필요하지 않습니다.
+차량도 연료가 필요하지 않습니다.
+| 자원
 
 |TurboProductionMode <true/false>
-| When enabled, all items craft instantly in the workbench and workshop.
-Buildings are unaffected.
-| World/Time
+| 활성화되면 작업대와 장비 작업장에서 모든 아이템이 즉시 제작됩니다.
+건물은 영향을 받지 않습니다.
+| 세계/시간
 
-|GiveItemStacks <Blueprint Path> <Number of Stacks>
-| Adds a number of full stacks of an item to the player's inventory.
-If the inventory isn't big enough to hold it all,
-extra slots will be granted as well.
-You can find an item's Blueprint Path on the
-https://satisfactory.gamepedia.com/[Satisfactory Wiki],
-finding the content on a
-https://github.com/Goz3rr/SatisfactorySaveEditor/tree/master/Reference%20Materials[reference list], or via searching around for it in
-https://www.gildor.org/en/projects/umodel[UModel].
-You can also use it to give yourself additional inventory slots
-via `GiveItemStacks "" numberOfSlots`
-| Resources
+|GiveItemStacks <블루프린트 경로> <스택 수>
+| 플레이어의 인벤토리에 아이템의 최대 스택 수를 추가합니다.
+인벤토리가 모든 아이템을 수용할 만큼 크지 않은 경우 추가 슬롯도 부여됩니다.
+https://satisfactory.gamepedia.com/[새티스팩토리 위키]에서 아이템의 블루프린트 경로를 찾거나 https://github.com/Goz3rr/SatisfactorySaveEditor/tree/master/Reference%20Materials[참조 목록]에서 콘텐츠를 찾거나 https://www.gildor.org/en/projects/umodel[UModel]에서 검색하여 찾을 수 있습니다.
+`GiveItemStacks "" 슬롯 수` 를 통해 추가 인벤토리 슬롯을 제공하는 데 사용할 수도 있습니다.
+| 자원
 
-|GiveItemsSingle <Blueprint Path> <Number of Items>
-| Adds a number of individual items to the player's inventory.
-Unlike `GiveItemStacks`, if the inventory can't hold the items,
-the inventory will NOT be expanded.
-You can find an item's Blueprint Path on the
-https://satisfactory.gamepedia.com/[Satisfactory Wiki],
-finding the content on a
-https://github.com/Goz3rr/SatisfactorySaveEditor/tree/master/Reference%20Materials[reference list], or via searching around for it in
-https://www.gildor.org/en/projects/umodel[UModel].
-| Resources
+|GiveItemsSingle <블루프린트 경로> <아이템 수>
+| 플레이어의 인벤토리에 여러 개별 항목을 추가합니다.
+`GiveItemStacks` 와 달리 인벤토리에 아이템을 보관할 수 없으면 인벤토리가 확장되지 않습니다.
+https://satisfactory.gamepedia.com/[새티스팩토리 위키]에서 아이템의 블루프린트 경로를 찾거나 https://github.com/Goz3rr/SatisfactorySaveEditor/tree/master/Reference%20Materials[참조 목록]에서 콘텐츠를 찾거나 https://www.gildor.org/en/projects/umodel[UModel]에서 검색하여 찾을 수 있습니다.
+| 자원
 
-|GiveResourceSinkCoupons <Amount>
-| Adds AWESOME Sink coupons to the pool that can be printed at an AWESOME Sink.
-Does not affect how many points it takes to earn the next coupon.
-| Resources
+|GiveResourceSinkCoupons <수량>
+| A.W.E.S.O.M.E. 싱크에서 인쇄할 수 있는 A.W.E.S.O.M.E. 싱크 쿠폰을 프린터에 추가합니다.
+다음 쿠폰을 얻는 데 필요한 포인트 수에는 영향을 미치지 않습니다.
+| 자원
 
-|Slomo <Multiplier>
-| Speeds up or slows down the entire game by the given multiplier.
-This includes player movement, particles, animations, etc.
-It has an effect on building operation rate,
-but not as pronounced as one may expect.
-For example, `10.0` makes Copper Sheets craft in
-around 3.5 seconds instead of the 6 seconds they take at `1.0`.
-| World/Time
+|Slomo <배수>
+| 주어진 배수로 전체 게임 속도를 높이거나 낮춥니다.
+여기에는 플레이어 이동, 입자, 애니메이션 등이 포함됩니다.
+건물 가동률에 영향을 주지만 예상만큼 두드러지지는 않습니다.
+예를 들어 `10.0` 을 사용하면 `1.0` 에서 6초가 걸리는 구리판 제작 시간이 약 3.5초로 단축됩니다.
+| 세계/시간
 
-|SetTimeOfDay <Hour> <Minute>
-| Sets the world time of day in 24 hour time format.
-| World/Time
+|SetTimeOfDay <시간> <분>
+| 24시간 형식으로 세계 시간을 설정합니다.
+| 세계/시간
 
-|SetTimeSpeedMultiplier <Multiplier>
-| Sets a world time of day speed multiplier.
-Set it to 0 to freeze the day/night cycle altogether.
-| (Unspecified)
+|SetTimeSpeedMultiplier <배수>
+| 세계 시간의 속도 배수를 설정합니다.
+낮/밤 주기를 모두 고정하려면 0으로 설정합니다.
+| (지정되지 않음)
 
 |EnableBuildableTick <true/false>
-| Enables/disables AFGBuildable ticking,
-which controls if buildings are animated.
-They will still produce items at their regular rate
-even when this is set to `false`.
-| Factory:Uncommon
+| 건물 애니메이션 여부를 제어하는 AFGBuildable 틱을 전환합니다.
+이것이 `false` 로 설정되어 있어도 여전히 일반 비율로 아이템을 생산합니다.
+| 공장:희귀
 
 |PlayerFly <true/false>
-| Enables/disables the vanilla flying cheat.
-| Player/Camera
+| 바닐라 플라잉 치트를 전환합니다.
+| 플레이어/카메라
 
 |PlayerNoClipModeOnFly <true/false>
-| Enables/disables noclip when in cheat fly mode.
-| Player/Camera
+| 치트 플라이 모드일 때 노클립을 전환합니다.
+| 플레이어/카메라
 
 |FlipVehicle
-| Flips the vehicle you are currently in by 180 degrees.
-If you're upright already, it will flip you upside down.
-| (Unspecified)
+| 현재 타고 있는 차량을 180도 뒤집습니다.
+이미 똑바로 되어 있어도 똑같이 뒤집습니다.
+| (지정되지 않음)
 
 |ResetAllFactoryLegsToZero <true/false>
-| Makes the support legs on all buildings reset to their default height.
-The boolean argument controls if it should "repopulateEmptyLegs,"
-presumably if they were deleted somehow.
-| (Unspecified)
+| 모든 건물의 지지대를 기본 높이로 재설정합니다.
+논리형 인수는 "repopulateEmptyLegs"(아마도 삭제된 경우)를 제어합니다.
+| (지정되지 않음)
 
 |RebuildFactoryLegsOneTileAroundPlayer
-| Recalculates the support legs on buildings near the player.
-If the gap is too large, they will just reset to zero.
-| (Unspecified)
+| 플레이어 근처 건물의 지지대를 다시 계산합니다.
+간격이 너무 크면 0으로 재설정됩니다.
+| (지정되지 않음)
 
-|FillAllFreightCars <percent full, float>
-| Fills all freight cars in the map with a nameless,
-descriptionless placeholder item.
-The argument controls how close to full they are, with 1.0 being 100%
-Freight cars that already had items in them when this command was run
-will have the items emptied instead of set to the fill percentage.
-| (Unspecified)
+|FillAllFreightCars <퍼센트, 실수>
+| 이름과 설명이 없는 플레이스홀더 아이템으로 맵의 모든 화물칸을 채웁니다.
+인수는 가득 찬 정도를 제어하며 1.0은 100%입니다.
+이 명령이 실행될 때 이미 아이템이 있던 화물칸은 채우기 비율로 설정되는 대신 아이템이 비워집니다.
+| (지정되지 않음)
 
 |EmptyAllFreightCars
-| Empties all freight cars in the map of their contents.
-| (Unspecified)
+| 내용물 맵에 있는 모든 화물칸을 비웁니다.
+| (지정되지 않음)
 
 |HideAllBuildings <true/false>
-| Hides or shows all factory buildings.
-They still have collision.
-| Display
+| 모든 공장 건물을 전환합니다.
+여전히 충돌될 수 있습니다.
+| 표시
 
 |ShowFactoryOnly <true/false>
-| Hides or shows all terrain, including the skybox and its light.
-Disables your flashlight when enabled.
-It still has collision.
-| Display
+| 스카이박스와 조명을 포함한 모든 지형을 전환합니다.
+활성화되면 손전등을 비활성화합니다.
+여전히 충돌될 수 있습니다.
+| 표시
 
 |ForceSpawnCreatures
-| Forces active spawners to spawn creatures
-even if the creature isn't set to spawn yet
-(because of day/night restrictions etc.)
-| World/Time
+| 생명체가 아직 스폰되도록 설정되지 않은 경우에도(주야간 제한 등으로 인해)
+활성화 된 생성기가 생명체를 스폰하도록 강제합니다.
+| 세계/시간
 
 // Crashes/bad
 

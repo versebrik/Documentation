@@ -1,5 +1,5 @@
-name: satisfactory-modding
-title: Satisfactory Modding Documentation
+name: satisfactory-modding-ko
+title: 새티스팩토리 모딩 문서
 version: latest
 nav:
   - modules/ROOT/nav.adoc

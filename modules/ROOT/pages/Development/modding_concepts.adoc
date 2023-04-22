@@ -1,3 +1,3 @@
-= Modding concepts
+= 모딩 컨셉
 
-In this section, we will provide information about many internal Satisfactory and Unreal Engine systems, as well as other important information regarding modding. Reading these sections will likely help you the most if you're looking to make something specific that isn't covered in the getting started tutorials.
+이 섹션에서는 많은 내부 새티스팩토리 및 언리얼 엔진 시스템에 대한 정보와 모딩에 관한 기타 중요한 정보를 제공합니다. 시작하기 튜토리얼에서 다루지 않은 특정 항목을 만들려는 경우 이 섹션을 읽으면 가장 도움이 될 것입니다.

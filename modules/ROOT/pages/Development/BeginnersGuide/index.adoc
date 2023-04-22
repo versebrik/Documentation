@@ -1,98 +1,92 @@
-= Getting Started
+= 시작하기
 
-In this section, we will guide you through the process of
-setting up a development environment,
-making your first mod for Satisfactory,
-and provide important information regarding modding.
+이 섹션에서는 개발 환경을 설정하고 새티스팩토리 위한 첫 번째 모드를 만드는 과정을 안내하고 모딩에 대한 중요한 정보를 제공합니다.
 
-The Getting Started Guide is written assuming that you follow each page in sequence,
-getting progressively less step-by-step as you get used to how things work.
+시작 가이드는 각 페이지의 순서를 따른다는 전조 하에 작성되었습니다.
+이 작업에 익숙해지면 차근차근 나아가지 않아도 될 겁니다.
 
-It is imperative that you follow the documentation closely,
-*skipping nothing*, while you are still learning.
-Every step in the docs is here for a good reason.
+학습 중에는 *어떠한 것도 건너뛰지 않고* 주의 깊게 살피며 따라 와야 합니다.
+모든 단계가 이 문서에 있는 데에는 중요한 이유가 있습니다.
 
-== Navigating the Docs
+== 문서 이동하기
 
-Before we get into the modding setup,
-here's a quick overview of how this documentation website works,
-so you can find the pages you're looking for.
+작업 환경 구성에 들어가기 전에,
+이 문서 웹사이트의 구조에 대해 간단히 읽고
+원하는 페이지를 쉽게 찾아가실 수 있습니다.
 
-Every documentation page has a corresponding link in the sidebar.
-On desktop, this sidebar is on the left side of the screen.
-On mobile, you must press the 'table of contents' button in the top left to expand it.
-This sidebar can be thought of as a folder system.
-You can use the triangles to expand or collapse subsections of the sidebar.
-Some, but not all, of these subsections have 'title pages',
-which are the entries listed in-line with the triangle in the sidebar.
-For example, you are currently on the title page of the 'Getting Started' section.
+모든 문서 페이지에는 사이드 바에 대응하는 링크가 있습니다.
+데스크톱의 경우 화면 왼쪽에 위치할 겁니다.
+모바일에서는 왼쪽 상단의 '목차' 버튼을 눌러야 펼쳐집니다.
+이 사이드바는 폴더 시스템으로 생각할 수 있습니다.
+삼각형을 사용하여 사이드바의 하위 섹션을 확장하거나 축소할 수 있습니다.
+전부는 아니지만 일부 하위 섹션에는 '제목 페이지'가 있습니다.
+사이드바의 삼각형과 인라인으로 나열된 항목입니다.
+예를 들어 현재 '시작하기' 섹션의 제목 페이지에 있습니다.
 
-This site hosts the documentation for the Satisfactory modding community,
-as well as a few specific mods.
-You can navigate to other mods' documentation with the switcher at the bottom of the sidebar.
+이 사이트는 새티스팩토리 모딩 커뮤니티를 위한 문서를 호스팅합니다.
+몇 가지 특정 모드뿐만 아니라,
+사이드바 하단에 있는 스위처를 사용하여 다른 모드의 문서로 이동할 수 있습니다.
 
-This getting started section should be followed in top to bottom order.
-The next page you should read after this one is titled 'Dependencies.'
+이 시작하기 섹션은 위에서 아래 순서로 따라야 합니다.
+이 페이지 이후에 읽어야 하는 다음 페이지는 '종속성'입니다.
 
-The docs also have a search functionality accessible in the top right.
-However, it's important to note that this search covers every mod on the site,
-as well as archived older versions of the documentation.
-Watch out for the 'Outdated Version' banner at the top of the screen to tell when you're on an old page.
+문서에는 오른쪽 상단에서 접근할 수 있는 검색 기능도 있습니다.
+그러나 이 검색은 사이트의 모든 모드를 다루고 있다는 점에 유의해야 합니다.
+보관된 이전 버전의 설명서도 마찬가지입니다.
+화면 상단의 '오래된 버전' 배너를 확인하여 이전 페이지에 있는지 알 수 있습니다.
 
 [TIP]
 ====
-As you read, keep your eyes out for boxes like these,
-which draw attention to particularly important things to watch out for,
-or helpful tips to help further your modding knowledge.
+읽으면서 특히 주의해야 할 중요한 사항이나 모딩 지식을 넓히는 데 도움이 되는 유용한 팁을 주는 이와 같은 상자에 눈을 떼지 마세요.
 ====
 
-== Contributing to the Docs
+== 문서에 기여하기
 
-These documentation pages are all written by community members, and are publicly editable via GitHub's PR system.
-You can see the source code by clicking 'Edit this Page' in the top right corner of any page.
+이 문서 페이지는 모두 커뮤니티 회원이 작성했으며 깃허브의 PR 시스템을 통해 공개적으로 편집할 수 있습니다.
+모든 페이지의 오른쪽 상단 모서리에 있는 '이 페이지 편집'을 클릭하면 소스 코드를 볼 수 있습니다.
 
-Please do not hesitate to contact us with corrections, suggestions, or questions.
-The best way to reach the team is our https://discord.gg/xkVJ73E[Discord Server].
+수정, 제안 또는 질문이 있는 경우 주저하지 말고 저희에게 연락해주세요.
+팀에 연락하는 가장 좋은 방법은 https://discord.gg/xkVJ73E[디스코드 서버]입니다.
 
-You can find more info on contributing to the docs
-https://github.com/satisfactorymodding/Documentation#readme[here].
+문서에 기여하는 방법에 대한 자세한 정보는
+https://github.com/satisfactorymodding/Documentation#readme[여기]에서 확인할 수 있습니다.
 
-== Mod Reference
+== 모드 레퍼런스
 
-We need to talk about the concept of a `mod reference` before we continue,
-because it will be referenced quite often.
+진행하는 동안 자주 언급 될 `mod reference`
+라는 개념에 대해 이해할 필요가 있습니다.
 
-A mod reference is essentially a mod's unique name.
-This mod reference will then be used in class names, file names, folder names, and many other places.
-When you upload your mod to the Satisfactory Mod Repository for other people to use,
-you'll need to provide your mod reference there as well.
-More info on the upload process can be found xref:UploadToSMR.adoc[here],
-but we suggest you actually write a mod first before trying to upload one.
+모드 레퍼런스는 기본적으로 모드의 고유 이름이라고 보면 됩니다.
+이 모드 레퍼런스는 클래스, 파일, 폴더의 이름 및 많은 곳에 사용됩니다.
+다른 사람들이 모드를 사용할 수 있게 새티스팩토리 모드 저장소에 업로드할 때,
+자신의 모드 레퍼런스 또한 제공해야 합니다.
+업로드 과정에 대한 더 많은 내용은 xref:UploadToSMR.adoc[여기]에서
+확인할 수 있지만 업로드하기 전에 모드를 실제로 만들어보는 것이 좋습니다.
 
-Your Unreal plugin (also known as your mod) will need to use the mod reference as its name,
-and any {cpp} modules you write must be in a Source folder with the mod reference as the name.
+언리얼 플러그인 (일명 모드)은 모드 레퍼런스를 이름으로 사용해야 하며,
+사용할 {cpp} 모듈도 이름이 모드 레퍼런스로 된 소스 폴더에 있어야 합니다.
 
-Mod references can't contain special characters (ex. `+`, `#`, `.`, `ß`, ...) *nor can they contain spaces*.
-However, they can contain underscores (`_`).
+모드 레퍼런스에는 특수 문자 (예를들어 `+`, `#`, `.`, `ß` 등)를 사용할 수 없으며 *공백 또한 포함됩니다*.
+단, 밑줄 (`_`)은 사용할 수 있습니다.
 
-We strongly suggest that you follow https://techterms.com/definition/pascalcase[Pascal Case] naming conventions,
-that is, each 'word' in the mod reference starts with a capital letter and the rest are lowercase.
+https://techterms.com/definition/pascalcase[파스칼 케이스] 명명 규칙을 따르는 것을 추천합니다.
+즉, 모드 레퍼런스의 각 단어의 첫 글자를 대문자로, 나머지 글자는 소문자로 표기하는 것이 좋습니다.
 
-Here are a few possible examples of mod names and suggested mod references.
+모드 이름을 모드 레퍼런스로 표기한 몇 가지 예시입니다.
 
-*Mod Name:* `Example Mod`
+*모드 이름:* `Example Mod`
 
-*Mod Reference:* `ExampleMod`
+*모드 레퍼런스:* `ExampleMod`
 
-*Mod Name:* `Rob's very cool mod`
+*모드 이름:* `Rob's very cool mod`
 
-*Mod Reference:* `RobsVeryCoolMod`
+*모드 레퍼런스:* `RobsVeryCoolMod`
 
-Note the exclusion of the apostrophe, because it's a special character.
+작은 따옴표 또한 특수 문자이므로 제외합니다.
 
-== Next Steps
+== 다음 단계
 
-Next up is setting up your modding development environment.
+다음으로는 모딩 개발 환경을 설정해 보겠습니다.
 // Future editors - this spot is purposefully missing a link to the Dependencies so people get practice using the sidebar.
-Use the site's sidebar to navigate to the 'Dependencies' page.
-You can read more about the sidebar in the link:#_navigating_the_docs[Navigating the Docs] section.
+사이트의 사이드 바에서 'xref:Development/BeginnersGuide/dependencies.adoc[종속성]' 페이지로 이동하세요.
+사이드 바에 대한 자세한 내용은 link:#_문서_이동하기[문서 이동하기] 섹션을 참조하세요.

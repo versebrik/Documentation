@@ -1,260 +1,203 @@
-= Frequently Asked Questions
+= 자주 묻는 질문
 
-You can find answers to frequently asked questions on the modding discord (and about modding in general) here.
+여기에서 모딩 디스코드(및 일반적인 모딩에 대해)에 대한 자주 묻는 질문에 대한 답변을 찾을 수 있습니다.
 
-Consider using your browser's Find on Page functionality (usually `Ctrl+F`)
-to quickly search this page for key words in your question.
+브라우저의 페이지에서 찾기 기능 (일반적으로 `Ctrl+F`)을 사용하여 이 페이지에서 질문의 핵심 단어를 빠르게 검색해 보세요.
 
-Is there a question you see asked a lot and would like to see it here?
-Feel free to discuss them on the https://discord.gg/xkVJ73E[Discord Server],
-or add them yourself via the 'Edit this Page' button in the top right.
+자주 묻는 질문이 있고 여기에서 확인하고 싶으신가요?
+https://discord.gg/xkVJ73E[디스코드 서버]에서 자유롭게 토론하거나 오른쪽 상단의 '이 페이지 편집' 버튼을 통해 직접 추가하세요.
 
-== How do I install mods?
+== 모드를 어떻게 설치하나요?
 
-=== For Windows 10:
+=== 윈도우 10에서:
 
-image:FAQ/win10_install_smm_guide.png[Steps to install SMM on Windows 10]
+image:https://cdn.discordapp.com/attachments/1097599041359061104/1097601404329267210/win10_install_smm_guide.png[윈도우 10에서 SMM을 설치하는 과정]
 
-=== For Windows 11:
+=== 윈도우 11에서:
 
-The installation process should be similar to that of Windows 10, but if you encounter a popup like this:
+설치 과정은 윈도우 10과 비슷하지만 다음과 같은 팝업이 표시되는 경우:
 
-image:FAQ/win11_subtle_block.png[Windows 11 "Search for app in store?" popup for untrusted installers]
+image:https://cdn.discordapp.com/attachments/1097599041359061104/1097599041619116214/win11_subtle_block.png[윈도우 11 "스토어에서 앱을 검색하시겠습니까?" 신뢰할 수 없는 설치 프로그램에 대한 팝업]
 
-Ignore it because it is not correct. Instead, right-click on the installer in your file manager and go to the properties tab.
+정확하지 않으니 무시하세요. 대신 파일 관리자에서 설치 프로그램을 우클릭하고 속성을 클릭하세요.
 
-image:FAQ/smm_installer_properties_unblock.png[The properties window for the SMM installer]
+image:https://cdn.discordapp.com/attachments/1097599041359061104/1097599041925304370/smm_installer_properties_unblock.jpg[SMM 설치 프로그램의 속성 창]
 
-Click the "Unblock" box and hit OK or Apply. Then try running it again, and it should work. Refer to the above illustration
-for the rest of the steps.
+"차단 해제" 박스를 클릭하고 확인 또는 적용을 누르세요. 그런 다음 다시 실행하면 작동할 겁니다. 나머지 단계는 위의 사진을 참조하세요.
 
-== The mod manager can't find my game!
+== 모드 관리자가 게임을 찾지 못해요!
 
-You might see error messages like:
-- `No Satisfactory Installs Found`
+`No Satisfactory Installs Found` 와 같은 오류 메시지가 표시될 수 있습니다.
 
-SMM queries the APIs of the Epic and Steam game store apps to determine where your game is.
-If you moved its location after installation manually, your installer client will not know where it is.
+SMM은 에픽 및 스팀 게임 스토어 앱의 API에 요청하여 게임이 어디에 있는지 확인합니다.
+설치 후 위치를 수동으로 이동한 경우 설치 프로그램 클라이언트는 위치를 알지 못합니다.
 
-You will need to reinstall your game through your store client so that it is in a known location.
+알려진 위치에 있도록 스토어 클라이언트를 통해 게임을 다시 설치해야 합니다.
 
-This will not affect your saves.
+이것은 세이브에 영향을 미치지 않습니다.
 
-== Can I add mods to a save I've already started?
+== 이미 시작한 세이브에 모드를 추가할 수 있나요?
 
-It varies depending on the mod, but in general, yes, this is totally fine.
-The mod should say on its mod page on ficsit.app if it can't be added to an in-progress game.
+모드에 따라 다르지만 일반적으로 네, 이것은 완전히 괜찮습니다.
+모드는 진행 중인 게임에 추가할 수 없는 경우 ficsit.app의 모드 페이지에 표기해 놓을 겁니다.
 
-== Do mods work with multiplayer?
+== 모드가 멀티플레이에서도 작동하나요?
 
-It is up to the mod developer to support multiplayer.
-Check the mod's page on ficsit.app for information about multiplayer support.
+멀티플레이를 지원하는 것은 모드 개발자에게 달려 있습니다.
+멀티플레이 지원에 대한 정보는 ficsit.app의 모드 페이지를 확인하세요.
 
-If the mod page doesn't say, try it out yourself and see!
+모드 페이지가 말하지 않으면 직접 시도해보고 확인하십시오!
 
-== Are Satisfactory mods safe?
+== 새티스팩토리의 모드는 안전한가요?
 
-_Or: 'Why does Satisfactory Mod Manager trigger my antivirus?'_
+_또는: '새티스팩토리 모드 관리자가 왜 내 백신 프로그램을 실행시키나요?'_
 
-Using Satisfactory mods is safe, as long as you only download mods from ficsit.app and install them via the https://smm.ficsit.app/[Mod Manager].
+ficsit.app에서만 모드를 다운로드하고 https://smm.ficsit.app/[모드 관리자]를 통해 설치하는 한 새티스팩토리 모드를 사용하는 것은 안전합니다.
 
-All files uploaded to ficsit.app are tested for malware and such before they are approved for download.
+ficsit.app에 업로드된 모든 파일은 다운로드가 승인되기 전에 멀웨어 등에 대한 테스트를 거칩니다.
 
-Your computer may claim that the Mod Manager is unsafe when you try to open it.
-This is because the mod manager does not have a
-https://comodosslstore.com/resources/what-is-signing-certificate/[signing certificate].
-The certificate costs hundreds per year.
-It's completely unnecessary for normal operation, and not worth it to pay for it.
+모드 관리자를 열려고 하면 컴퓨터에서 모드 관리자가 안전하지 않다고 알릴 수 있습니다.
+모드 관리자에 [서명인증서]가 없기 때문입니다.
+인증서 비용은 연간 수백입니다.
+정상적인 작동에는 전혀 필요하지 않으며 비용을 지불할 가치도 없습니다.
 
-But rest assured, this community created Satisfactory Mod Manager from scratch.
-We all use it. Provided you only get it via https://smm.ficsit.app/ we can assure you it is safe.
-You can find the source code for it here: https://github.com/satisfactorymodding/SatisfactoryModManager
+하지만 안심하세요. 이 커뮤니티는 처음부터 새티스팩토리 모드 관리자를 만들었습니다.
+우리 모두는 그것을 사용합니다. https://smm.ficsit.app/ 을 통해서만 받을 수 있다면 안전하다고 확신할 수 있습니다.
+여기에서 소스 코드를 찾을 수 있습니다: https://github.com/satisfactorymodding/SatisfactoryModManager
 
-== How do I use <insert mod name here>?
+== <여기에 모드 이름 입력> 모드를 어떻게 사용하나요?
 
-It is up to the mod developer to inform you how to use their mod.
-Check the mod's page on ficsit.app for documentation.
+모드 사용 방법을 알려주는 것은 모드 개발자에게 달려 있습니다.
+설명서는 ficsit.app의 모드 페이지를 확인하세요.
 
-Generally, most mods will require you to unlock something in the HUB or MAM before you can use them.
-Mods can be configured from the 'Mods' tab on the main menu,
-or from in-game via the 'Mod Configs' tab on the pause menu.
+일반적으로 대부분의 모드는 사용하기 전에 HUB 또는 MAM에서 무언가를 잠금 해제해야 합니다.
+모드는 메인 메뉴의 'Mods' 탭에서 구성하거나 일시 중지 메뉴의 'Mod Configs' 탭을 통해 게임 내에서 구성할 수 있습니다.
 
-== Do mods work with Experimental?
+== 모드가 실험 버전에서도 작동하나요?
 
-It is up to the mod developer to support Satisfactory's experimental branch.
-Check the mod's page on ficsit.app, or the mod manager extended details, for support.
+새티스팩토리 실험 버전을 지원하는 것은 모드 개발자에게 달려 있습니다.
+지원을 받으려면 ficsit.app의 모드 페이지 또는 모드 관리자 확장 세부 정보를 확인하세요.
 
-Once you're on the page, check mods' Compatibility via two stickers found in the description.
-The rocket icon indicates Early Access and the flask icon is for Experimental.
+페이지에 접속하면 설명에 있는 두 개의 스티커를 통해 모드의 호환성을 확인하세요.
+로켓 아이콘은 얼리 액세스를 나타내고 플라스크 아이콘은 실험용입니다.
 
-In the Mod Manager:
+모드 관리자에서:
 
-image:https://cdn.discordapp.com/attachments/719242895114108938/1089302323966246973/unknown_1.png[SMM Compatibility Info screenshot]
+image:https://cdn.discordapp.com/attachments/719242895114108938/1089302323966246973/unknown_1.png[SMM 호환성 정보 스크린샷]
 
-On ficsit.app:
+ficsit.app에서:
 
-image:https://cdn.discordapp.com/attachments/719242895114108938/1089325949755084971/image.png[ficsit.app Compatibility Info screenshot]
+image:https://cdn.discordapp.com/attachments/719242895114108938/1089325949755084971/image.png[ficsit.app 호환성 정보 스크린샷]
 
-You can hover over the sticker for any notes that may have been left by the author.
-They may indicate a version to use, which you can change to in the Mod Manager with the dropdown right above the stickers.
+작성자가 남긴 메모의 스티커 위로 마우스를 올리세요.
+사용 가능한 버전을 나타내며 스티커 바로 위에 있는 드롭다운을 사용하여 모드 관리자에서 변경할 수 있습니다.
 
-- *Green - Working*:
-  The mod should be functioning as intended.
-- *Yellow/Orange - Damaged*:
-  Something is wrong with the mod that is causing it to work improperly,
-  but it is partially working.
-  Be sure to click the icon to see an explanation of what is going wrong!
-- *Red - Broken*:
-  This mod is suffering from a critical problem,
-  and could do things like crash your game at launch if you were to install it.
-  Be sure to click the icon to see an explanation of what is going wrong!
+- *초록색 - 작동 중*:
+  모드가 의도된 대로 작동합니다.
+- *노란색/주황색 - 손상됨*:
+  작동은 하지만 불안정한 부분이 있을 수 있습니다.
+  무엇이 잘못되었는지에 대한 설명을 보려면 아이콘을 클릭하세요!
+- *빨간색 - 고장남*:
+  이 모드는 심각한 문제를 겪고 있으며 설치하는 경우 실행 시 게임이 충돌하는 등의 결과를 초래할 수 있습니다.
+  무엇이 잘못되었는지에 대한 설명을 보려면 아이콘을 클릭하세요!
 
-Please note, these are updated manually, and may be slightly out of date.
-If you find a mod that is missing its stickers or ones that seem to be incorrect,
-please let us know in the Discord (including a SMM debug zip if it does not work is useful as well!)
-and we will investigate and update the info if necessary.
+이는 수동으로 업데이트되며 약간 오래된 것일 수 있습니다.
+스티커가 없거나 잘못된 것으로 보이는 모드를 찾으면 디스코드에서 알려주세요(작동하지 않는 경우 SMM 디버그 압축 파일 포함도 유용합니다!).
+필요한 경우 정보를 조사하고 업데이트하겠습니다.
 
-== Satisfactory Mod Manager is open, but I can't see it's window!
+== 새티스팩토리 모드 관리자가 열려 있지만 창을 볼 수 없어요!
 
-The program's window somehow got offscreen.
-We're still not sure what causes this.
-To fix it you need to edit the `%appdata%\SatisfactoryModManager\settings.json` file
-and within the `windowLocation` property, set the `x` and `y` to 0 to bring the window back on the screen.
+프로그램 창이 화면 밖으로 벗어났군요.
+원인이 무엇인지는 아직 확실하지 않습니다.
+이를 수정하려면 `%appdata%\SatisfactoryModManager\settings.json` 파일을 열어 `windowLocation` 속성 내에서 `x` 및 `y` 를 0으로 설정 후 저장하세요.
 
-Restart SMM after you do that.
+그런 다음 SMM을 다시 시작하세요.
 
-== Where do I get help with a mod that is not in the mod portal?
+== 모드 포털에 없는 모드에 대한 도움말은 어디에서 얻을 수 있나요?
 
-We try to keep everything we work on organized through the ficsit.app mod portal.
-If you need help with something that isn't there,
-check the mod's information page for a mod-specific discord to join,
-or ask nicely in the `#help-using-mods` discord channel.
+우리는 ficsit.app 모드 포털을 통해 조직된 모든 작업을 유지하려고 노력합니다.
+거기에 없는 것에 대한 도움이 필요하면 모드의 정보 페이지에서 참여할 모드 관련 디스코드를 확인하거나 `#help-using-mods` 채널에서 정중하게 질문하세요.
 
-== What happens if I open up a save without mods installed?
+== 모드를 설치하지 않고 세이브 파일을 열면 어떻게 되나요?
 
-If you were to load up a save file without mods,
-all of the content from those mods will simply vanish from the save,
-and the game should load just fine with no modded content.
+모드 없이 세이브 파일을 로드하는 경우 해당 모드의 모든 콘텐츠는 세이브 파일에서 사라지고 게임은 모드 콘텐츠 없이 정상적으로 로드됩니다.
 
-Keep in mind that after saving the game after loading it with no mods,
-the modded content would be permanently gone from that point on.
-So, if you want to keep modded content, don't play in that save without your mods installed!
+모드 없이 게임을 로드한 후 저장하면 해당 시점부터 모드 콘텐츠가 영구적으로 사라집니다.
+따라서 모드 콘텐츠를 유지하려면 모드를 설치하지 않은 상태에서 해당 세이브에서 플레이하지 마세요!
 
-If you ever load a save without mods by accident,
-just quit the game without saving and launch the game with your mods, your content should still be there.
+실수로 모드 없이 세이브 파일을 로드한 경우 저장하지 않고 게임을 종료하고 모드로 게임을 실행하면 콘텐츠가 그대로 남아 있을 것입니다.
 
-== How do I make my own mod?
+== 나만의 모드를 만들려면 어떻게 해야 하나요?
 
-If you're looking to write your own mods, we suggest you start with
-making blueprint mods first rather than C++ mods.
-Check out the xref:Development/BeginnersGuide/index.adoc[Getting Started Guide]
-and consider picking up the `Aspiring Modder` role in our https://discord.gg/xkVJ73E[Discord]'s `#rules` channel.
+자신만의 모드를 만들려는 경우 C++ 모드보다 청사진 모드를 먼저 만드는 것부터 시작하는 것이 좋습니다.
+xref:Development/BeginnersGuide/index.adoc[시작하기 가이드]를 확인하고 https://discord.gg/xkVJ73E[디스코드]의 `#rules` 채널에서 `Aspiring Modder` 역할을 얻는 것을 고려해보세요.
 
-== How do I share my mods with my friends for multiplayer?
+== 멀티플레이를 위해 친구와 내 모드를 공유하려면 어떻게 해야 하나요?
 
-You can use the Mod Manager's profile import/export functionality.
+모드 관리자의 프로필 가져오기/내보내기 기능을 사용하면 됩니다.
 
-image:https://cdn.discordapp.com/attachments/555507339969560586/833748278456746014/unknown.png[SMM Import/Export screenshot]
+image:https://cdn.discordapp.com/attachments/555507339969560586/833748278456746014/unknown.png[SMM 가져오기/내보내기 스크린샷]
 
-== Where can I find the game's log files?
+== 게임 로그 파일은 어디에서 찾을 수 있나요?
 
-You can find various log files at different locations:
+다양한 위치에서 다양한 로그 파일을 찾을 수 있습니다.
 
-- In your game install folder, `pre-launch-debug.log` and `SatisfactoryModLoader.log`
-- At `%localappdata%/FactoryGame/Saved/logs`, where FactoryGame.log is located
+- 게임 설치 폴더에서 `pre-launch-debug.log` 및 `SatisfactoryModLoader.log`
+- `%localappdata%/FactoryGame/Saved/logs` 에서 FactoryGame.log 
 
-The easiest way to gather logs is the Mod Manager's "generate debug info" feature:
+로그를 수집하는 가장 쉬운 방법은 모드 관리자의 "디버그 정보 생성" 기능입니다.
 
-image:https://cdn.discordapp.com/attachments/719242895114108938/1089039840512852019/debuginfo.png[SMM Generate Debug Info screenshot]
+image:https://cdn.discordapp.com/attachments/719242895114108938/1089039840512852019/debuginfo.png[SMM 디버그 정보 생성 스크린샷]
 
-== How do I verify my game files?
+== 게임 무결성 검사는 어떻게 하나요?
 
-On Steam:
+스팀:
 
-image:https://cdn.discordapp.com/attachments/719242895114108938/1089039933446037605/unknown.png[Steam screenshot]
+image:https://cdn.discordapp.com/attachments/719242895114108938/1089039933446037605/unknown.png[스팀 스크린샷]
 
-On Epic:
+에픽:
 
-image:https://cdn.discordapp.com/attachments/719242895114108938/1089039946263838751/unknown.png[Epic screenshot]
+image:https://cdn.discordapp.com/attachments/719242895114108938/1089039946263838751/unknown.png[에픽 스크린샷]
 
-== Why is the mod manager downloading slowly, or failing to download?
+== 모드 관리자의 다운로드가 느리거나 실패해요
 
-You might see error messages like:
+다음과 같은 오류 메시지가 표시될 수 있습니다.
 
-// cspell:words getaddrinfo ENOENT ECONNRESET
 - `Unexpected error while downloading file: getaddrinfo ENOENT github.com`
 - `Unexpected error while downloading file: read ECONNRESET`
 - `Unexpected error while downloading file: unable to verify the first certificate`
 
-Internet restrictions mess with our services.
-To work around this, download the mod files mentioned in the error message from SMR manually.
-If they are named [modname].zip rename them to [modname].smod, then place the file into 
-`%localappdata%\SatisfactoryModManager\downloadCache\smlVersions\[the SML version you need]` for SML and
-`%localappdata%\SatisfactoryModManager\downloadCache\mods` for everything else.
+인터넷 제한은 우리 서비스를 방해합니다.
+이 문제를 해결하려면 SMR에서 오류 메시지에 언급된 모드 파일을 수동으로 다운로드하세요.
+이름이 [modname].zip인 경우 이름을 [modname].smod로 바꾼 다음 파일을 SML의 경우
+`%localappdata%\SatisfactoryModManager\downloadCache\smlVersions\[필요한 SML 버전]` 에, 그 밖의 모든 경우에는 `%localappdata%\SatisfactoryModManager\downloadCache\mods` 에 넣습니다.
 
-You can also try using a proxy or VPN.
+프록시 또는 VPN을 사용해 볼 수도 있습니다.
 
-== The mod manager can't download any mods
+== 모드 관리자가 모드를 다운로드하지 못해요
 
-You might see messages like:
+다음과 같은 오류 메시지가 표시될 수 있습니다.
 
-// cspell:words ETIMEDOUT
 - `error while downloading file [...] Premature close`
 - `Error 3 attempts to download <ModName> failed`
 - `Error: Unexpected error while downloading file connect ETIMEDOUT`
 
-Your internet speed is likely too slow and the download is being cut off early.
-Try disabling the mod manager's timeout as shown below.
+인터넷 속도가 너무 느려서 다운로드가 일찍 중단되는 것 같습니다.
+아래와 같이 모드 관리자의 시간 초과를 비활성화하세요.
 
-image:https://cdn.discordapp.com/attachments/719242895114108938/1089041903342862336/unknown.png[Timeout disable screenshot]
+image:https://cdn.discordapp.com/attachments/719242895114108938/1089041903342862336/unknown.png[시간초과 비활성화 스크린샷]
 
 
-== How can I troubleshoot crash issues?
+== 충돌 문제를 어떻게 해결하나요?
 
-The easiest way to gather logs is the Mod Manager's "generate debug info" feature and send the file on the Modding Discord's `#help-using-mods` discord channel.
+로그를 수집하는 가장 쉬운 방법은 모드 관리자의 "디버그 정보 생성" 기능을 사용하여 모딩 디스코드의 `#help-using-mods` 채널에 파일을 보내는 것입니다.
 
-image:https://cdn.discordapp.com/attachments/719242895114108938/1089039840512852019/debuginfo.png[SMM Generate Debug Info screenshot]
+image:https://cdn.discordapp.com/attachments/719242895114108938/1089039840512852019/debuginfo.png[SMM 디버그 정보 생성 스크린샷]
 
-You can also follow this process to track down which mod(s) you have installed are leading to a crash (or other undesired behavior):
+또한 이 과정에 따라 설치한 모드가 충돌(또는 기타 원하지 않는 동작)을 일으키는지 추적할 수 있습니다.
 
-image:https://cdn.discordapp.com/attachments/719242895114108938/1089043908174037023/Satisfactory_Troubleshooting_v2.png[Troubleshooting flowchart]
+image:https://media.discordapp.net/attachments/1097599041359061104/1097599042537668729/Satisfactory_Troubleshooting_v2.png[문제 해결 흐름도]
 
-== How can I tell what mod added an item/milestone/recipe/thing?
+== 어떤 모드가 아이템/마일스톤/제작법/기타 등등 을 추가했는지 어떻게 알 수 있나요?
 
-Consider using https://ficsit.app/mod/TFIT[TFIT - The Ficsit Information Tool]
-and https://ficsit.app/mod/MAMTips[MAM Enhancer]
-mods which add tools to help you identify content.
-
-== I'm having VRAM issues, how do I fix them?
-
-If you're having trouble with VRAM usage
-it's important to understand the two things that are the biggest contributions:
-graphics settings and texture content.
-Other things contribute, but there are a smaller fraction than these. 
-Additionally, with multiple monitors and/or other programs running,
-they will also eat up available VRAM,
-so consider closing extraneous programs
-especially things that are highly dynamic like streaming apps.
-
-The more mods you use that add more texture content,
-the more they will eat up your VRAM.
-This is a direct relationship that can't be change by any settings or details from the user's end.
-It is unlikely to be a single mod causing the problem.
-It is a death by a thousand small cuts
-and every mod author has to do their best,
-but more content means more space is used.
-
-If removing mod content is not desirable the other option is to adjust your graphics settings.
-Even at minimum there are extensive options Unreal provides for you to tune it even lower.
-These may cause unforeseen glitches and issues so be careful with them.
-
-https://forums.unrealengine.com/t/can-you-change-graphics-settings-with-console-commands/308720
-
-== Can I put the Mod Manager on a drive other than my C drive?
-
-In order to change the location where SMM caches the downloaded mod files you need to create a symlink for the SMM cache folder.
-
-1. Close SMM
-2. Move the folder `%localappdata%\SatisfactoryModManager` to a drive that has enough space. You can rename the folder to something like SMMCache if you want to make it easier to remember what that folder is.
-3. Open Command Prompt as admin and run this command `mklink /D "%localappdata%\SatisfactoryModManager" "The\New\Location"`, replacing `The\New\Location` with the path of the new folder location (for example `D:\SMMCache`).
-4. Open SMM and download a mod to test and make sure the change has taken effect.
+콘텐츠를 식별하는 데 도움이 되는 도구를 추가하는 https://ficsit.app/mod/TFIT[TFIT - The Ficsit Information Tool] 및 https://ficsit.app/mod/MAMTips[MAM Enhancer] 모드 사용을 고려하세요.

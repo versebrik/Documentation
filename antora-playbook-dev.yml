@@ -1,6 +1,6 @@
 site:
-  title: DEV Satisfactory Modding Documentation
-  start_page: satisfactory-modding::index.adoc
+  title: 새티스팩토리 개발자 모딩 문서
+  start_page: satisfactory-modding-ko::index.adoc
 
   ## Used for dev
   url: http://localhost:8000

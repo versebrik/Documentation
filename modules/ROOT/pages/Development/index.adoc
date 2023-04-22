@@ -1,25 +1,25 @@
-= Development
+= 개발
 
-If you'd like to make your own mod, this section of the docs is for you!
+자신만의 모드를 만들고 싶다면 문서의 이 섹션이 적합합니다!
 
-Here you can find information regarding making mods and getting your development environment up and running.
-Check out the subcategories on the left to get started.
+여기에서 모드 제작 및 개발 환경 설정 및 실행에 관한 정보를 찾을 수 있습니다.
+시작하려면 왼쪽의 하위 범주를 확인하십시오.
 
-If you're just looking to play Satisfactory with mods, check out how to install mods xref:index.adoc#_for_users[here] instead.
+모드로 새티스팩토리를 플레이하려는 경우 xref:index.adoc#_일반_사용자를_위해[여기]에서 모드를 설치하는 방법을 확인하세요.
 
-== Resources
+== 리소스
 
-Below is a list of some good resources about making mods for SF, UE4, C++ and 3D Modeling. Please contact us if you know of other resources that should be added to this list.
+아래는 SF, UE4, C++ 및 3D 모델링을 위한 모드 제작에 대한 유용한 리소스 목록입니다. 이 목록에 추가해야 하는 다른 리소스를 알고 있는 경우 당사에 문의하십시오.
 
-- https://www.youtube.com/channel/UCOVfF7PfLbRdVEm0hONTrNQ[Mathew Wadstein] 
+- https://www.youtube.com/channel/UCOVfF7PfLbRdVEm0hONTrNQ[Mathew Wadstein]
 +
-A good YouTube Channel showing a more in-depth look at features of UE4 (BP only).
+UE4의 기능을 더 자세히 보여주는 좋은 유튜브 채널입니다(블루프린트만 해당).
 - https://www.youtube.com/c/AlexForsythe[Alex Forsythe]
 +
-A YouTube Channel that covers Unreal concepts (both BP and C++) in detail, including replication.
+복제를 포함하여 언리얼 개념(블루프린트 및 C++ 모두)을 자세히 다루는 유튜브 채널입니다.
 - https://www.youtube.com/channel/UCz-eYJAUgSE-mqzKtit7m9g[Virtus Learning Hub]
 +
-A "general" tutorial series channel for UE game development (also covers some C++)
-- http://academy.unrealengine.com/[Unreal Engine Academy]
+UE 게임 개발을 위한 "일반" 튜토리얼 시리즈 채널입니다(일부 C++도 포함).
+- http://academy.unrealengine.com/[언리얼 엔진 아카데미]
 +
-A neat learning platform made by Epic Games for learning Unreal Engine.
+언리얼 엔진 학습을 위해 에픽게임즈에서 만든 깔끔한 학습 플랫폼입니다.

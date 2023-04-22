@@ -1,6 +1,2 @@
-.idea
-.vscode
-build/
-*.rst
-node_modules/
-!.vscode/tasks.json
+build
+node_modules

@@ -1,50 +1,49 @@
-= SML Configuration
+= SML 구성
 
-Through SML's configuration file system, it's easy for mod developers to create config files for their mods, and easy for users to change mod settings.
+SML의 구성 파일 시스템을 통해 모드 개발자는 자신의 모드에 대한 구성 파일을 쉽게 만들고 사용자는 모드 설정을 쉽게 변경할 수 있습니다.
 
-== Config Folder
+== 구성 폴더
 
-The config files for all mods (and SML itself) reside in the same configuration file folder.
+모든 모드(및 SML 자체)의 구성 파일은 동일한 구성 파일 폴더에 있습니다.
 
-The folder is located under `<game root>/FactoryGame/Configs`.
+폴더는 `<게임 경로>/FactoryGame/Configs` 아래에 있습니다.
 
-== Config File
+== 구성 파일
 
-SML's configuration system uses json format.
+SML의 구성 시스템은 json 형식을 사용합니다.
 
-All config files are located in the aforementioned <<Config Folder>> and share the same naming scheme, `<ModID>.cfg`. The config file for SML is called `SML.cfg`.
+모든 구성 파일은 앞서 언급한 <<구성 폴더>>에 있으며 동일한 명명 체계인 `<모드 아이디>.cfg` 를 공유합니다. SML의 구성 파일은 `SML.cfg` 입니다.
 
-If you don't see a mod's config file listed here, it's most likely because the mod doesn't have a config file.
+여기에 나열된 모드의 구성 파일이 표시되지 않으면 모드에 구성 파일이 없기 때문일 가능성이 큽니다.
 
-== SML configuration options
+== SML 구성 옵션
 
-SML itself also provides a couple of configuration settings, allowing you to control its behavior.
+SML 자체도 몇 가지 구성 설정을 제공하여 동작을 제어할 수 있습니다.
 
 [cols="1,1,1,4a"]
 |===
-|Name |Type |Default |Description
+|이름 |유형 |기본값 |설명
 
 |enableCheatConsoleCommands
-|bool
+|논리형
 |false
-|Enables all available SML console cheat commands, a list of which can be found xref:SMLChatCommands.adoc#_console_cheat_commands[here].
+|사용 가능한 모든 SML 콘솔 치트 명령을 활성화합니다. 그 목록은 xref:SMLChatCommands.adoc#_콘솔_치트_명령어[여기]에서 찾을 수 있습니다.
 
 |developmentMode
-|bool
+|논리형
 |false
-|Leave this at false, otherwise the game will load slower to no benefit (as a user).
-It is necessary for part of SML development.
+|SML 개발의 일부에 필요한 것이며, false로 두세요. 그렇지 않으면 게임이 더 느리게 로드되어 (사용자에게) 도움이 되지 않습니다.
 
 |consoleWindow
-|bool
+|논리형
 |false
-|Toggles whether or not the external SML console window is visible.
-This is also known as SML Logging. More info can be found xref:Development/TestingResources.adoc#logging[here].
+|외부 SML 콘솔 창의 표시 여부를 전환합니다.
+이를 SML 로깅이라고도 합니다. 더 많은 정보는 xref:Development/TestingResources.adoc#_SML_로깅[여기]에서 찾을 수 있습니다.
 
 |disabledChatCommands
-|string array
+|문자열
 |[ ]
-|Allows you to disable certain chat commands by simply putting the command into the string array.
-In Multiplayer, if the host lists commands here, they will also be disabled for clients.
+|명령을 문자열 배열에 넣기만 하면 특정 채팅 명령을 비활성화할 수 있습니다.
+멀티플레이에서 호스트가 여기에 명령을 나열하면 클라이언트에 대해서도 비활성화됩니다.
 
 |===
